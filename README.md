@@ -148,7 +148,7 @@ Quick Sort is a recursive sorting algorithm that is more effective than other O(
 | Average case performance  | O(n log n)  |
 
 ## :couple: About us ##
-This is the first group project in Holberton Paris School in the 15 mars 2020!!<br>
+This is the group project in Holberton Paris School in the 8 July 2022!!<br>
 If you have a question or a comment, please contact us.<br>
 Grégoire COUDRIN (4251@holbertonschool.com)<br>
 Hiromi VARNIER (4336@holbertonschool.com)<br>
