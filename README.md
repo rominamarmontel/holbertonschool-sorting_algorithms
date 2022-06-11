@@ -34,6 +34,7 @@ You can then run it by invoking `./sort` in that same directory.
 
 ## Data Structure and Functions
 For this project you are given the following print_array, and print_list functions:
+```
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -57,6 +58,8 @@ void print_array(const int *array, size_t size)
     }
     printf("\n");
 }
+```
+```
 #include <stdio.h>
 #include "sort.h"
 
@@ -80,9 +83,11 @@ void print_list(const listint_t *list)
     }
     printf("\n");
 }
+```
 Our files print_array.c and print_list.c (containing the print_array and print_list functions) will be compiled with your functions during the correction.
 Please declare the prototype of the functions print_array and print_list in your sort.h header file
 Please use the following data structure for doubly linked list:
+```
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -96,6 +101,7 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
+```
 Please, note this format is used for Quiz and Task questions.
 
 - O(1)
@@ -141,4 +147,8 @@ Quick Sort is a recursive sorting algorithm that is more effective than other O(
 | Best case performance  | O(n log n)  |
 | Average case performance  | O(n log n)  |
 
-## Author
+## :couple: About us ##
+This is the first group project in Holberton Paris School in the 15 mars 2020!!<br>
+If you have a question or a comment, please contact us.<br>
+Grégoire COUDRIN (4251@holbertonschool.com)<br>
+Hiromi VARNIER (4336@holbertonschool.com)<br>
