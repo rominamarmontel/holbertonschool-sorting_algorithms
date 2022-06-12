@@ -118,7 +118,7 @@ Please, note this format is used for Quiz and Task questions.
 Here is a quick tip to help you test your sorting algorithms with big sets of random integers: Random.org
 
 ## Bubble Sort
-A slow sorting algorithm for the simplest data sets
+The simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst case time complexity is quite high.
 
 | Case  | Performance |
 | :---: | :---: |
@@ -126,11 +126,19 @@ A slow sorting algorithm for the simplest data sets
 | Best case performance  | O(n)  |
 | Average case performance  | O(n^2)  |
 
+## Insertion sort
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+
+| Case  | Performance |
+| :---: | :---: |
+| Worst case performance   | |
+| Best case performance  | |
+| Average case performance  | |
+
 
 ## Selection Sort
 
-Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations
-
+Selection sort sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 | Case  | Performance |
 | :---: | :---: |
 | Worst case performance   | O(n^2)  |
@@ -139,7 +147,7 @@ Selection sort is noted for its simplicity, and it has performance advantages ov
 
 ## Quick sort
 
-Quick Sort is a recursive sorting algorithm that is more effective than other O(nlogn) algorithms for large datasets that fit in memory, but is unstable. Quick Sort in general does not requiere extra space
+Quick Sort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.
 
 | Case  | Performance |
 | :---: | :---: |
