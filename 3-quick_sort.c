@@ -55,8 +55,11 @@ int partition(int *array, int left, int right, size_t size)
 			}
 		}
 	}
-	swap(&array[x + 1], &array[right]);/*swap index x +1 and pivot*/
-	print_array(array, size);
+	if (array[right] < array[x + 1])
+	{
+		swap(&array[x + 1], &array[right]);/*swap index x +1 and pivot*/
+		print_array(array, size);
+	}
 	return (x + 1);
 }
 /**
