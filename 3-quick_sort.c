@@ -25,7 +25,9 @@ void quick_sort_part(int *array, int left, int right, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	quick_sort_part(array, 0, size, size - 1);
+	if (size < 2 || array == NULL)
+		return;
+	quick_sort_part(array, 0, size - 1, size);
 }
 /**
  * partition - the given array around the picked pivot
