@@ -66,6 +66,7 @@ int partition(int *array, int left, int right, size_t size)
 void swap(int *x, int *y)
 {
 	int temp = *x;
+
 	*x = *y;
 	*y = temp;
 }
