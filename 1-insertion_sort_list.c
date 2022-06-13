@@ -1,24 +1,32 @@
 #include "sort.h"
 /**
  * insertion_sort_list - comparing 1st & 2nd elements to check which one is greater
- * @list:
+ * @list:list of number
  * Return: None
  */
 void insertion_sort_list(listint_t **list)
 {
-    size_t i, j;
-    int n = 0;
-    size_t key;
+	listint_t *temp = NULL;
+	int i;
 
-    for (i = 1; i < n; i++)
-    {
-        key = list[i];
-        j = j - 1;
-        while (j >= 0 && list[i] > key)
-        {
-            list[j + 1] = list[j];
-            j = j- 1;
-        }
-        list[j + 1] = key;
-    }
+	if (list == NULL || (*list)->next == NULL)
+		return;
+
+	temp = *list;
+	while (temp->next)
+	{
+		if (temp->n > temp->next->n)
+		{
+			i = temp->next->n;
+			temp->next->n = temp->n;
+			temp->n = i;
+			print_list(*list);
+			while(temp->prev)
+			{
+				temp = temp->prev;
+			}
+			continue;
+		}
+		temp = temp->next;
+	}
 }
