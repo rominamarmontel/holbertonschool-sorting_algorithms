@@ -6,38 +6,40 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *temp = NULL;
+	listint_t *temp = NULL, *temp2 = NULL;
 
 	if (list == NULL || (*list)->next == NULL)
 		return;
 
 	temp = *list;
+	temp2 = temp->next;
 	while (temp->next)
 	{
-		if (temp->n > temp->next->n)
+		if (temp->n > temp2->n)
 		{
-			if (temp->next == NULL && temp->prev == NULL)
+			if (temp2->next == NULL && temp->prev == NULL)
 			{
-				temp->next->prev = NULL;
-				temp->prev = temp->next;
 				temp->next = NULL;
-				temp->prev->next = temp;
+				temp2->next = temp;
+				temp->prev = temp2;
+				temp2->prev = NULL;
 			}
-			else if (temp->prev == NULL)
+			if (temp->prev == NULL)
 			{
-				temp->next->prev = NULL;
-				temp->prev = temp->next;
-				temp->next->next->prev = temp;
-				temp->next = temp->prev->next;
-				temp->prev->next = temp;
+			        temp->next = temp2->next;
+				temp->prev = temp2;
+				temp2->next->prev = temp;
+				temp2->prev = NULL;
+				temp2->next = temp;
+				*list = temp2;
 			}
-			else if (temp->next == NULL)
+			else if (temp2->next == NULL)
 			{
-				temp->next->prev = temp->prev;
-				temp->prev = temp->next;
-				temp->prev->prev->next = temp->next;
+				temp2->prev = temp->prev;
+				temp->prev->next = temp2;
+				temp2->next = temp;
+				temp->prev = temp2;
 				temp->next = NULL;
-				temp->prev->next = temp;
 			}
 			else
 			{
@@ -53,8 +55,10 @@ void insertion_sort_list(listint_t **list)
 			{
 				temp = temp->prev;
 			}
+			temp2 = temp->next;
 			continue;
 		}
 		temp = temp->next;
+		temp2 = temp2->next;
 	}
 }
