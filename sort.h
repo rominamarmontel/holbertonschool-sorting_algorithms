@@ -28,7 +28,7 @@ void quick_sort(int *array, size_t size);
 void quick_sort_part(int *array, int left, int right, size_t size);
 int partition(int *array, int left, int right, size_t size);
 void shell_sort(int *array, size_t size);
-void pushdown (int array[], int first, int last);
+void pushdown(int array[], int first, int last);
 void swap_prev_and_next_null(listint_t *temp);
 void swap_prev_null(listint_t *temp);
 void swap_next_null(listint_t *temp);
